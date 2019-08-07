@@ -32,7 +32,7 @@ export class DisplayService {
   }
   private resetFields(): void {
     document.querySelector('.colors').innerHTML = '';
-    this.targetColorField.innerHTML = this.dataService.getTargetColor();
+    this.targetColorField.innerHTML = `RGB: ${this.dataService.getTargetColor().slice(4, this.dataService.getTargetColor().length - 1)}`;
     this.targetColorField.style.backgroundColor = '#1e1e1e';
     this.resultField.innerHTML = 'guess color';
     this.resultField.classList.remove('error', 'success');
